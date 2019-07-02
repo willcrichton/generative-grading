@@ -7,7 +7,6 @@ from base import Decision
 
 class Solution(Decision):
 	def renderCode(self):
-
 		templateVars = {
 			'mainPrompt': self.expand('mainPrompt'),
 			'inputPrompt': self.expand('inputPrompt'),
