@@ -16,23 +16,15 @@ class Program(Decision):
 		})
 
 	def renderCode(self):
-		# this is an example of rendering out of order
-		# you need to expand methods first (and in particular)
-		# the run method. Then you can expand ivars etc
-		val = self.expand('TwoWayDecision')
-		return 'hello: ' + val
-
-
-	def renderCode(self):
 		templateVars = {
-			# 'Solution':self.expand('Solution'),
+			'Solution':self.expand('Solution'),
 		}
-		# template = '''
-		# public class PythagoreanTheorem extends ConsoleProgram {
-		# 	public void run() {
-		# 		{Solution}
-		# 	}
-		# }
+		template = '''
+		public class PythagoreanTheorem extends ConsoleProgram {
+			public void run() {
+				{Solution}
+			}
+		}
 		'''
 		return gu.format(template, templateVars)
 
