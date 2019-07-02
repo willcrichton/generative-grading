@@ -16,6 +16,9 @@ class Program(Decision):
 		})
 
 	def renderCode(self):
+		# We set a used to False in the beginning
+		#self.addState('aUsed', False)
+
 		templateVars = {
 			'Solution':self.expand('Solution'),
 		}

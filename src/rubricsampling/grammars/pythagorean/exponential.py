@@ -27,7 +27,12 @@ class exponential(Decision):
 # Students use of Math.pow()
 class mathPow(Decision):
 	def renderCode(self):
-		return 'Math.pow(x,2)'
+		aUsed = self.getState('aUsed')
+		if aUsed == False:
+			self.addOrSetState('aUsed', True)
+			return 'Math.pow(a,2)'
+		else:
+			return 'Math.pow(b,2)'
 
 
 # Decision: mathInline
@@ -35,6 +40,11 @@ class mathPow(Decision):
 # Students use of inline command '*'
 class mathInline(Decision):
 	def renderCode(self):
-		return 'x*x'
+		aUsed = self.getState('aUsed')
+		if aUsed == False:
+			self.addOrSetState('aUsed', True)
+			return 'a*a'
+		else:
+			return 'b*b'
 
 

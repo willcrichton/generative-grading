@@ -7,12 +7,14 @@ from base import Decision
 
 class Solution(Decision):
 	def renderCode(self):
+		self.addState('aUsed', False)
+		
 		templateVars = {
 			'mainPrompt': self.expand('mainPrompt'),
 			'inputPrompt': self.expand('inputPrompt'),
 			'exponential': self.expand('exponential'),
 			'outputPrompt': self.expand('outputPrompt')
-		}
+		}	
 
 		# assumes all students used doubles
 		template = '''
