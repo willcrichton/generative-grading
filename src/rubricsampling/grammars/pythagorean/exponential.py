@@ -30,9 +30,9 @@ class mathPow(Decision):
 		return 'Math.pow(x,2)'
 
 
-# Decision: mathPow
+# Decision: mathInline
 # ------------------------
-# Students use of Math.pow()
+# Students use inline command '*'
 class mathInline(Decision):
 	def renderCode(self):
 		return 'x*x'
