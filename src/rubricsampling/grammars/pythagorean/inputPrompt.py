@@ -13,7 +13,7 @@ from base import Decision
 class inputPrompt(Decision):
 	def registerChoices(self):
 		self.addChoice('inputPrompt', {
-			'': 55, # space only
+			'': 55, # empty string to keep simplest prompt unchanged
 			'Enter ': 22,
 			'enter value ': 11,
 			'Enter value for ': 11,
