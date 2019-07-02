@@ -32,7 +32,7 @@ class mathPow(Decision):
 
 # Decision: mathInline
 # ------------------------
-# Students use inline command '*'
+# Students use of inline command '*'
 class mathInline(Decision):
 	def renderCode(self):
 		return 'x*x'
