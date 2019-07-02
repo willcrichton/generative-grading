@@ -20,11 +20,11 @@ class Program(Decision):
 			'Solution':self.expand('Solution'),
 		}
 		template = '''
-		public class PythagoreanTheorem extends ConsoleProgram {
-			public void run() {
+		public class PythagoreanTheorem extends ConsoleProgram {{
+			public void run() {{
 				{Solution}
-			}
-		}
+			}}
+		}}
 		'''
 		return gu.format(template, templateVars)
 
