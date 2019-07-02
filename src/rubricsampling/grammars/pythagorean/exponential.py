@@ -8,7 +8,7 @@ from base import Decision
 # Decision: exponential
 # ------------------------
 # Students may calculate exponentiation inline or use Math.pow()
-class usesMethod(Decision):
+class exponential(Decision):
 	def registerChoices(self):
 		self.addChoice('usesMethod', {
 			True : 5,     # they calculate the exponential inline
