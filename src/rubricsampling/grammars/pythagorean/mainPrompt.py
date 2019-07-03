@@ -8,8 +8,8 @@ from base import Decision
 # Decision: mainPrompt
 # ------------------------
 # There are lots of ways of writing the main prompt
-# This is by no means an extensive list
-# List does not account for different punctiations
+# This is by no means an extensive list.
+# List does not account for different punctuations.
 class mainPrompt(Decision):
 	def registerChoices(self):
 		self.addChoice('mainPrompt', {

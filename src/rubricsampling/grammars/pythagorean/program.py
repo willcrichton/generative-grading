@@ -15,10 +15,7 @@ class Program(Decision):
 			self.ROOT_RV_VAL: 1
 		})
 
-	def renderCode(self):
-		# We set a used to False in the beginning
-		#self.addState('aUsed', False)
-
+	def renderCode(self):		
 		templateVars = {
 			'Solution':self.expand('Solution'),
 		}

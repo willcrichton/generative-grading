@@ -8,13 +8,14 @@ from base import Decision
 # Decision: outputPrompt
 # ------------------------
 # There are lots of ways of writing the output prompt
-# This is by no means an extensive list
-# List does not account for different punctiations
+# This is by no means an extensive list.
+# List does not account for different punctuations.
 class outputPrompt(Decision):
 	def registerChoices(self):
+		var = self.params['var']
 		self.addChoice('outputPrompt', {
-			'c = ': 55, # empty string
-			'c: ': 22,
+			f'{var}=': 55, 
+			f'{var}:': 22,
 			'The answer is': 11,
 			'The hypotenuse is ': 11,
 		})

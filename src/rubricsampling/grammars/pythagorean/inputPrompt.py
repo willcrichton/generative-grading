@@ -8,8 +8,8 @@ from base import Decision
 # Decision: inputPrompt
 # ------------------------
 # There are lots of ways of writing the input prompt
-# This is by no means an extensive list
-# List does not account for different punctiations
+# This is by no means an extensive list.
+# List does not account for different punctuations.
 class inputPrompt(Decision):
 	def registerChoices(self):
 		self.addChoice('inputPrompt', {
