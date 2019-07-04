@@ -16,11 +16,19 @@ class exponential(Decision):
 				False : 10    # they use Math.pow()
 			})
 
+	def updateRubric(self):
+		method = self.getChoice('usesMethod')
+		if not method:
+			self.turnOnRubric('usesMath.Pow')
+		else:
+			self.turnOnRubric('usesInlineCalculation')
+
 	def renderCode(self):		
 		if self.getChoice(f'usesMethod'):
 			return self.expand('mathPow', params=self.params)
 		else:
 			return self.expand('mathInline', params=self.params)
+
 
 # Decision: mathPow
 # ------------------------
