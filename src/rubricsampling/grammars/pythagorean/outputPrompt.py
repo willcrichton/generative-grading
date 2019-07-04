@@ -12,17 +12,23 @@ from base import Decision
 # List does not account for different punctuations.
 class outputPrompt(Decision):
 	def registerChoices(self):
-		var = self.params['var']
 		self.addChoice('outputPrompt', {
-			f'{var}=': 55, 
-			f'{var}:': 22,
-			'The answer is': 11,
-			'The hypotenuse is ': 11,
+			'a': 55, 
+			'b': 22,
+			'c': 11,
+			'd': 11,
 		})
 
 	def renderCode(self):
+		var = self.params['var']
+		prompts = {
+			'a': f'{var}=',
+			'b': f'{var}:',
+			'c': 'The answer is',
+			'd': 'The hypotenuse is '
+		}
 		templateVars = {
-			'base':self.getChoice('outputPrompt'),
+			'base': prompts[self.getChoice('outputPrompt')],
 		}
 		template = '{base}'
 		return gu.format(template, templateVars)
